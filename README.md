@@ -57,16 +57,16 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
 ## 1. Data Initialization
 - Loads delivery points from a GeoJSON dataset
 - Automatically categorizes into clusters
-2. Vehicle Assignment
+## 2. Vehicle Assignment
 - Each vehicle:
     - Has fuel capacity & mileage
     - Gets assigned clusters based on proximity
-3. Optimization Logic
+## 3. Optimization Logic
 - Routes are optimized using:
     - Distance
     - Traffic conditions
     - Fuel constraints
-4. Dynamic Rebalancing
+## 4. Dynamic Rebalancing
 - If a vehicle runs low on fuel:
 - Remaining stops are reassigned
 # 🎯 Use Cases
@@ -85,8 +85,9 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
     - 🧠 AI-based demand prediction
     - 📦 Database integration (MongoDB / PostgreSQL)
 # 👨‍💻 Contributors
-***Vrushabh Sawant***
-***Atharva Mojar***
-***Shourya Bhurke***
-***Dwij Vora***
+- ***Vrushabh Sawant***
+- ***Atharva Mojar***
+- ***Shourya Bhurke***
+- ***Dwij Vora***
+
 
