@@ -1,8 +1,11 @@
 # 🚀 Getting Started
+
 1. Clone the Repository:
-    git clone [https://github.com/ZeeRox-dev/Route-IQ.git](https://github.com/ZeeRox-dev/Route-IQ)
+
+    git clone [https://github.com/ZeeRox-dev/Route-IQ.git](https://github.com/ZeeRox-dev/Route-IQ) 
     cd routeiq
-3. Run the Application
+   
+2. Run the Application
 
 Simply open the HTML file in your browser:
 
