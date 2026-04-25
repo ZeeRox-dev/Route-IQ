@@ -54,7 +54,7 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
     - HERE Maps API (for live traffic)
 
 # 🧩 How It Works
-1. Data Initialization
+## 1. Data Initialization
 - Loads delivery points from a GeoJSON dataset
 - Automatically categorizes into clusters
 2. Vehicle Assignment
