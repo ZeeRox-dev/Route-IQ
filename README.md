@@ -4,8 +4,8 @@ RouteIQ is an interactive fleet management and route optimization web applicatio
 
 Built as a single-page HTML application, it combines mapping, clustering, and optimization logic into a visually rich dashboard.
 
-# 🌟 Features: 
-# 🚗 Multi-Vehicle Fleet Management
+### 🌟 Features: 
+### 🚗 Multi-Vehicle Fleet Management
 - Add/remove delivery vehicles dynamically
 - Assign starting locations via map clicks
 - Track fuel levels, mileage, and performance
