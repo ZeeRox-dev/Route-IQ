@@ -52,3 +52,41 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
 - Data: GeoJSON for delivery points
 - APIs (optional):
     - HERE Maps API (for live traffic)
+
+# 🧩 How It Works
+1. Data Initialization
+- Loads delivery points from a GeoJSON dataset
+- Automatically categorizes into clusters
+2. Vehicle Assignment
+- Each vehicle:
+    - Has fuel capacity & mileage
+    - Gets assigned clusters based on proximity
+3. Optimization Logic
+- Routes are optimized using:
+    - Distance
+    - Traffic conditions
+    - Fuel constraints
+4. Dynamic Rebalancing
+- If a vehicle runs low on fuel:
+- Remaining stops are reassigned
+# 🎯 Use Cases
+- Logistics & delivery startups
+- Smart city routing systems
+- Fleet simulation for hackathons
+- Academic projects (optimization, GIS, AI)
+# ⚠️ Limitations
+- No backend (all logic runs client-side)
+- Routing engine is simulated (not full OSRM integration)
+- Map rendering via iframe (limited customization)
+    - 🔮 Future Improvements
+    - 🔗 Integrate OSRM locally for real routing
+    - 🌍 Replace iframe with Leaflet/Mapbox
+    - 📡 Real-time GPS tracking
+    - 🧠 AI-based demand prediction
+    - 📦 Database integration (MongoDB / PostgreSQL)
+# 👨‍💻 Contributors
+***Vrushabh Sawant***
+***Atharva Mojar***
+***Shourya Bhurke***
+***Dwij Vora***
+
