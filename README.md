@@ -86,8 +86,9 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
     - 📦 Database integration (MongoDB / PostgreSQL)
 # 👨‍💻 Contributors
 - ***Vrushabh Sawant***
-- ***Atharva Mojar***
+- [***Atharv Mojar***](https://github.com/legitdev-ath)
 - ***Shourya Bhurke***
 - ***Dwij Vora***
+
 
 
