@@ -2,7 +2,7 @@
 
 1. Clone the Repository:
 
-        git clone [https://github.com/ZeeRox-dev/Route-IQ.git](https://github.com/ZeeRox-dev/Route-IQ) 
+        git clone https://github.com/ZeeRox-dev/Route-IQ.git
         cd routeiq
    
 3. Run the Application
