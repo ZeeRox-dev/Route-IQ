@@ -74,7 +74,16 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
 - Smart city routing systems
 - Fleet simulation for hackathons
 - Academic projects (optimization, GIS, AI)
-
+# ⚠️ Limitations
+- No backend (all logic runs client-side)
+- Routing engine is simulated (not full OSRM integration)
+- Map rendering via iframe (limited customization)
+    - 🔮 Future Improvements
+    - 🔗 Integrate OSRM locally for real routing
+    - 🌍 Replace iframe with Leaflet/Mapbox
+    - 📡 Real-time GPS tracking
+    - 🧠 AI-based demand prediction
+    - 📦 Database integration (MongoDB / PostgreSQL)
 # 👨‍💻 Contributors
 - [***Vrushabh Sawant***](https://github.com/ZeeRox-dev)
 - [***Atharv Mojar***](https://github.com/legitdev-ath)
