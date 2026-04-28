@@ -136,6 +136,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:13
 .about-card p{color:var(--muted);line-height:1.6;font-size:12px}
 .toggle-debug{position:fixed;bottom:16px;left:16px;background:var(--glass);backdrop-filter:blur(12px);border:1px solid var(--border);color:var(--muted);padding:6px 14px;border-radius:20px;font-size:10px;cursor:pointer;z-index:999;font-family:var(--mono);transition:all .2s}
 .toggle-debug:hover{border-color:var(--accent);color:var(--accent)}
+.watermark-reveal{position:fixed;inset:0;background:rgba(44,36,22,.92);backdrop-filter:blur(12px);z-index:10000;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;transition:opacity .8s}
+.watermark-reveal.show{opacity:1}
+.watermark-text{font-family:var(--display);font-size:clamp(3rem,8vw,8rem);color:var(--accent);text-align:center;letter-spacing:8px;text-shadow:0 0 40px rgba(45,138,86,.3);animation:watermarkPulse 2s ease-in-out infinite}
+@keyframes watermarkPulse{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.03)}}
 
 /* Fleet Management */
 .vehicle-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:8px;transition:all .2s}
@@ -242,6 +246,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:13
 </div>
 
 <div class="toggle-debug" onclick="toggleDebugPanel()">Debug</div>
+
+<!-- Watermark Reveal Overlay -->
+<div class="watermark-reveal" id="watermarkReveal"><div class="watermark-text">TEAM_ALTF4</div></div>
 
 <div class="debug-panel" id="debugPanel" style="display:none;">
   <div class="debug-title">
@@ -582,7 +589,27 @@ function updateFleetSummary(){document.getElementById('summaryVehicles').textCon
 
 // UI helpers
 function showToast(msg){const t=document.getElementById('coordToast');t.textContent=msg;t.style.opacity='1';clearTimeout(t._tmr);t._tmr=setTimeout(()=>t.style.opacity='0',2500);}
-function toggleDebugPanel(){const panel=document.getElementById('debugPanel');panel.style.display=panel.style.display==='none'?'block':'none';}
+
+// Watermark debug click counter
+let debugClickCount = 0;
+let debugClickTimer = null;
+function toggleDebugPanel(){
+  debugClickCount++;
+  clearTimeout(debugClickTimer);
+  debugClickTimer = setTimeout(() => { debugClickCount = 0; }, 2000);
+  
+  if(debugClickCount >= 5) {
+    debugClickCount = 0;
+    const wm = document.getElementById('watermarkReveal');
+    wm.classList.add('show');
+    setTimeout(() => wm.classList.remove('show'), 3000);
+    return;
+  }
+  
+  const panel = document.getElementById('debugPanel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+}
+
 function updateDebugMode(mode){debugState.mode=mode;document.getElementById('debugMode').textContent=mode;}
 function showApiKeyModal(){document.getElementById('apiKeyModal').style.display='flex';document.getElementById('apiKeyInput').value=HERE_API_KEY;}
 function closeApiModal(){document.getElementById('apiKeyModal').style.display='none';}
