@@ -85,9 +85,9 @@ Built as a single-page HTML application, it combines mapping, clustering, and op
     - 🧠 AI-based demand prediction
     - 📦 Database integration (MongoDB / PostgreSQL)
 # 👨‍💻 Contributors
-- ***Vrushabh Sawant***
+- [***Vrushabh Sawant***](https://github.com/ZeeRox-dev)
 - [***Atharv Mojar***](https://github.com/legitdev-ath)
-- ***Shourya Bhurke***
+- [***Shourya Bhurke***](https://github.com/GAMERJURY)
 - ***Dwij Vora***
 
 
